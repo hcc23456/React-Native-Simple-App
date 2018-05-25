@@ -1,0 +1,7 @@
+open terminal and run the following to launch emulator
+
+~/Library/Android/sdk/tools/emulator -avd Nexus_6_API_23
+
+then cd into working directory and run
+
+npm run android or npm run ios
