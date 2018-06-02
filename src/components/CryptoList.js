@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, FlatList, StyleSheet, AppRegistry } from "react-native";
+import { View, Text, FlatList, Button, StyleSheet, AppRegistry } from "react-native";
 
 class CryptoList extends Component {
   constructor(props) {
@@ -93,29 +93,10 @@ class CryptoList extends Component {
             {item.key} {item.USD}
           </Text>} //references data in format set
         />
+        <Button title="Refresh" onPress={() => this.makeRemoteRequest()}  />
       </View>
     );
   }
 } //end class
-
-//this stylesheet is outside class
-const styles = StyleSheet.create({
- 
-  MainContainer :{
-    // Setting up View inside content in Vertically center.
-    justifyContent: 'center',
-    flex:1,
-    margin: 10
-    },
-    
-    item: {
-      padding: 10,
-      fontSize: 18,
-      height: 44,
-    },
-});
-
-//register stylesheet so can be used inside class
-AppRegistry.registerComponent('CryptoList', () => CryptoList);
 
 export default CryptoList;
